@@ -48,9 +48,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Re-checkout after push to ensure clean git state
+      # Re-checkout to ensure clean git state for deployment
       - name: Checkout for deployment
-        if: steps.verify_diff.outputs.changed == 'true'
         uses: actions/checkout@v4
         with:
           ref: ${{ github.ref }}
