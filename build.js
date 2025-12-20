@@ -11,7 +11,7 @@ const content = JSON.parse(fs.readFileSync(CONTENT_FILE, 'utf8'));
 let html = fs.readFileSync(TEMPLATE_FILE, 'utf8');
 
 function r(old, val) {
-  html = html.replace(new RegExp(old.replace(/[.*+?^${}()|[\]\]/g, '\$&'), 'g'), val || '');
+  html = html.replace(new RegExp(old.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), val || '');
 }
 
 r('<title>UNCONVENTIONAL MINDS - Robotics Venture Studio</title>', `<title>${content.meta.title}</title>`);
