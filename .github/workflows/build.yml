@@ -28,6 +28,14 @@ jobs:
       - name: Run build script
         run: npm run build
 
+      - name: Prepare deployment directory
+        run: |
+          mkdir -p deploy
+          cp index.html deploy/
+          cp -r css deploy/
+          cp -r js deploy/
+          cp -r assets deploy/
+
 
       # Deploy to production (main branch)
       - name: Deploy to Production
@@ -35,10 +43,9 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          publish_dir: ./deploy
           publish_branch: gh-pages
           destination_dir: .  # Root for production
-          exclude_assets: '.github,node_modules,.git,*.backup.html,*.original.html,staging'
           force_orphan: false
 
       # Deploy to staging (staging branch)
@@ -47,10 +54,9 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          publish_dir: ./deploy
           publish_branch: gh-pages
           destination_dir: staging  # Subfolder for staging
-          exclude_assets: '.github,node_modules,.git,*.backup.html,*.original.html'
           keep_files: true  # Mantiene i file production
           force_orphan: false
 
