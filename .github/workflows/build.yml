@@ -32,18 +32,19 @@ jobs:
       # Deploy to production (main branch)
       - name: Deploy to Production
         if: github.ref == 'refs/heads/main'
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
           publish_branch: gh-pages
           destination_dir: .  # Root for production
           exclude_assets: '.github,node_modules,.git,*.backup.html,*.original.html,staging'
+          force_orphan: false
 
       # Deploy to staging (staging branch)
       - name: Deploy to Staging
         if: github.ref == 'refs/heads/staging'
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
@@ -51,6 +52,7 @@ jobs:
           destination_dir: staging  # Subfolder for staging
           exclude_assets: '.github,node_modules,.git,*.backup.html,*.original.html'
           keep_files: true  # Mantiene i file production
+          force_orphan: false
 
       # Badge with environment info
       - name: Display deployment info
