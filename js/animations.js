@@ -123,21 +123,17 @@ function updateMobileProgress() {
         star.classList.remove('on-orange');
     }
 
-    // Logo color change on orange sections (1 and 3)
+    // Logo image and color change on orange sections (1 and 3)
     if(currentSection === 1 || currentSection === 3) {
         if(logoIcon) {
-            logoIcon.style.background = '#fff';
-            logoIcon.style.borderColor = '#fff';
-            logoIcon.style.setProperty('--icon-core-color', 'var(--accent)');
+            logoIcon.style.backgroundImage = "url('assets/Logo_white.png')";
         }
         if(logoUnconventional) {
             logoUnconventional.style.color = '#fff';
         }
     } else {
         if(logoIcon) {
-            logoIcon.style.background = 'var(--accent)';
-            logoIcon.style.borderColor = 'var(--text)';
-            logoIcon.style.setProperty('--icon-core-color', 'var(--text)');
+            logoIcon.style.backgroundImage = "url('assets/Logo_dark.png')";
         }
         if(logoUnconventional) {
             logoUnconventional.style.color = 'var(--accent)';
@@ -182,23 +178,17 @@ function loop() {
             }
         }
 
-        // Logo color change on orange sections (1 and 3)
+        // Logo image and color change on orange sections (1 and 3)
         if(i === 1 || i === 3) {
             if(logoIcon) {
-                logoIcon.style.background = '#fff';
-                logoIcon.style.borderColor = '#fff';
-            }
-            if(logoIcon && logoIcon.querySelector) {
-                const iconCore = logoIcon;
-                iconCore.style.setProperty('--icon-core-color', 'var(--accent)');
+                logoIcon.style.backgroundImage = "url('assets/Logo_white.png')";
             }
             if(logoUnconventional) {
                 logoUnconventional.style.color = '#fff';
             }
         } else {
             if(logoIcon) {
-                logoIcon.style.background = 'var(--accent)';
-                logoIcon.style.borderColor = 'var(--text)';
+                logoIcon.style.backgroundImage = "url('assets/Logo_dark.png')";
             }
             if(logoUnconventional) {
                 logoUnconventional.style.color = 'var(--accent)';

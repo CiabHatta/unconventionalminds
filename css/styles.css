@@ -91,23 +91,12 @@ header.nav-bar {
 .logo-icon {
     width: 32px;
     height: 32px;
-    background: var(--accent);
-    border: 2px solid var(--text);
+    background-image: url('../assets/Logo_dark.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     position: relative;
     flex-shrink: 0;
-    --icon-core-color: var(--text);
-    transition: all 0.3s ease;
-}
-.logo-icon::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 12px;
-    height: 12px;
-    background: var(--icon-core-color);
-    border-radius: 50%;
     transition: all 0.3s ease;
 }
 .logo-text {
@@ -117,7 +106,7 @@ header.nav-bar {
     gap: 2px;
 }
 .logo-unconventional {
-    font-family: 'Nata Sans', sans-serif;
+    font-family: 'Chillax-Bold', sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
     letter-spacing: 1px;
@@ -125,7 +114,7 @@ header.nav-bar {
     transition: color 0.3s ease;
 }
 .logo-minds {
-    font-family: 'Nata Sans', sans-serif;
+    font-family: 'Chillax-Bold', sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
     letter-spacing: 1px;
@@ -146,7 +135,7 @@ header.nav-bar {
 .talk-btn:hover { background: var(--accent); color: #000; border-color: var(--accent); }
 
 /* Scroller logic */
-.progress-bar { position: fixed; bottom: 0; left: 0; height: 6px; background: var(--accent); width: 0%; z-index: 500; transition: width 0.1s; }
+.progress-bar { display: none; } /* Removed orange progress bar */
 .scroll-container { position: fixed; top: 0; left: 0; height: 100%; display: flex; will-change: transform; }
 
 .section {
@@ -177,9 +166,9 @@ header.nav-bar {
 /* Stella fissa che si muove */
 .progress-star {
     position: fixed;
-    bottom: 10px;
+    bottom: -6px;
     left: 10%;
-    font-size: 24px;
+    font-size: 50px;
     color: #151515;
     opacity: 0.9;
     z-index: 401;
@@ -436,7 +425,7 @@ header.nav-bar {
     gap: 10px;
 }
 .inv-stats small { display: block; color: #fff; font-size: 0.9rem; }
-.inv-stats span { color: var(--accent); font-size: 1.8rem; font-weight: 700; }
+.inv-stats span { color: var(--accent); font-size: 1.3rem; font-weight: 500; }
 
 /* Contacts - Design V2 */
 .s-cont {
