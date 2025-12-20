@@ -48,6 +48,13 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      # Re-checkout after push to ensure clean git state
+      - name: Checkout for deployment
+        if: steps.verify_diff.outputs.changed == 'true'
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
       # Deploy to production (main branch)
       - name: Deploy to Production
         if: github.ref == 'refs/heads/main'
