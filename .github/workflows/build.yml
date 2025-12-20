@@ -5,10 +5,6 @@ on:
     branches:
       - main
       - staging
-    paths:
-      - 'content-simple.json'
-      - 'build.js'
-      - 'index.html'
   workflow_dispatch: # Permette di eseguire manualmente
 
 permissions:
@@ -32,27 +28,6 @@ jobs:
       - name: Run build script
         run: npm run build
 
-      - name: Check for changes
-        id: verify_diff
-        run: |
-          git diff --quiet index.html || echo "changed=true" >> $GITHUB_OUTPUT
-
-      - name: Commit and push if changed
-        if: steps.verify_diff.outputs.changed == 'true'
-        run: |
-          git config --global user.name 'GitHub Actions Bot'
-          git config --global user.email 'actions@github.com'
-          git add index.html
-          git commit -m "🤖 Auto-build: Update HTML from content changes"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # Re-checkout to ensure clean git state for deployment
-      - name: Checkout for deployment
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ github.ref }}
 
       # Deploy to production (main branch)
       - name: Deploy to Production
@@ -79,11 +54,10 @@ jobs:
 
       # Badge with environment info
       - name: Display deployment info
-        if: steps.verify_diff.outputs.changed == 'true'
         run: |
           if [ "${{ github.ref }}" == "refs/heads/main" ]; then
-            echo "✅ Deployed to PRODUCTION: https://YOUR-USERNAME.github.io/unconventionalminds/"
+            echo "✅ Deployed to PRODUCTION: https://ciabhatta.github.io/unconventionalminds/"
           else
-            echo "✅ Deployed to STAGING: https://YOUR-USERNAME.github.io/unconventionalminds/staging/"
+            echo "✅ Deployed to STAGING: https://ciabhatta.github.io/unconventionalminds/staging/"
           fi
 
