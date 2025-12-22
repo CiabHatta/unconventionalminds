@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "UNCONVENTIONAL MINDS - Robotics Venture Studio",
-    "description": "We bridge the gap between Lab & Market. From zero to Exit in 24 Months."
+    "description": "We build robotics ventures. From zero to Exit."
   },
 
   "header": {
@@ -114,21 +114,21 @@
     },
 
     "contact": {
-      "title": "CRAFT AN<br><span class=\"highlight\">UNCONVENTIONAL</span><br>WORLD",
+      "title": "BE<br><span class=\"highlight\">UNCONVENTIONAL</span><br>WITH US",
       "subtitle": "Three paths. One destination.",
       "buttons": [
         {
-          "subtitle": "[ NEED EXECUTION? ]",
+          "subtitle": "[ SPARK A REVOLUTION ]",
           "title": "CORPORATE",
           "email": "paolo@unconventionalminds.it"
         },
         {
-          "subtitle": "[ JOIN PIPELINE ]",
+          "subtitle": "[ KICKSTART YOUR IDEA ]",
           "title": "FOUNDER",
           "email": "paolo@unconventionalminds.it"
         },
         {
-          "subtitle": "[ SEEKING ALPHA ]",
+          "subtitle": "[ SHUT UP AND TAKE MY MONEY ]",
           "title": "INVESTOR",
           "email": "paolo@unconventionalminds.it"
         }

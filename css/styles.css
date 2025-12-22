@@ -112,7 +112,7 @@ header.nav-bar {
 }
 .logo-unconventional {
     font-family: 'Chillax-Regular', sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 1.5rem;
     letter-spacing: 1px;
     color: var(--accent);
@@ -120,7 +120,7 @@ header.nav-bar {
 }
 .logo-minds {
     font-family: 'Chillax-Regular', sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 1.5rem;
     letter-spacing: 1px;
     color: var(--text);
@@ -128,7 +128,7 @@ header.nav-bar {
 }
 .nav-links { display: flex; gap: 40px; }
 .nav-item {
-    font-family: 'Roboto Mono', sans-serif; font-weight: 600; font-size: 1rem; letter-spacing: 0.05em;
+    font-family: 'Roboto Mono', sans-serif; font-weight: 500; font-size: 1rem; letter-spacing: 0.05em;
     color: #555; cursor: pointer; position: relative; transition: color 0.3s;
 }
 .nav-item:hover, .nav-item.active { color: var(--accent); font-weight: 700; }
@@ -223,7 +223,7 @@ header.nav-bar {
 
 .hero-tags {
     display: flex;
-    gap: 12px;
+    gap: 20px;
     flex-shrink: 0;
 }
 .h-tag {
