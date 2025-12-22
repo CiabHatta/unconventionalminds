@@ -119,8 +119,10 @@ function updateMobileProgress() {
     // Change star color based on section
     if(currentSection === 1 || currentSection === 3) {
         star.classList.add('on-orange');
+		cursor.classList.add('on-orange');
     } else {
         star.classList.remove('on-orange');
+		cursor.classList.remove('on-orange'); 
     }
 
     // Logo image and color change on orange sections (1 and 3)
@@ -173,8 +175,10 @@ function loop() {
             // Change color on orange sections (1 and 3)
             if(i === 1 || i === 3) {
                 star.classList.add('on-orange');
+				cursor.classList.add('on-orange');
             } else {
                 star.classList.remove('on-orange');
+				cursor.classList.remove('on-orange');
             }
         }
 
