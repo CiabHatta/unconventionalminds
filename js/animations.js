@@ -47,6 +47,13 @@ const logoTexts = {
     3: LOGO_CONFIG.logoBySection['sec-3'].emphasizedText,
     4: LOGO_CONFIG.logoBySection['sec-4'].emphasizedText
 };
+const logoBaseTexts = {
+    0: LOGO_CONFIG.logoBySection['sec-0'].text,
+    1: LOGO_CONFIG.logoBySection['sec-1'].text,
+    2: LOGO_CONFIG.logoBySection['sec-2'].text,
+    3: LOGO_CONFIG.logoBySection['sec-3'].text,
+    4: LOGO_CONFIG.logoBySection['sec-4'].text
+};
 
 let cur=0, tar=0, max=0;
 let isMobile = false;
@@ -158,6 +165,10 @@ function updateMobileProgress() {
             logoMinds.style.opacity = '1';
         }, 300);
     }
+    // Change logo base text (Unconventional)
+    if(logoUnconventional && logoBaseTexts[currentSection]) {
+        logoUnconventional.textContent = logoBaseTexts[currentSection];
+    }
 }
 
 function loop() {
@@ -223,6 +234,10 @@ function loop() {
                 logoMinds.textContent = currentLogoText;
                 logoMinds.style.opacity = '1';
             }, 300);
+        }
+        // Change logo base text (Unconventional)
+        if(logoUnconventional && logoBaseTexts[i]) {
+            logoUnconventional.textContent = logoBaseTexts[i];
         }
 
         // Timeline Animation logic (Desktop only)
