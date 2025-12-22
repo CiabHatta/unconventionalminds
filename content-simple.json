@@ -50,8 +50,8 @@
 
     "os": {
       "tag": "02 // UM_OS25.UM",
-      "title": "SYSTEM ARCHITECTUREs",
-      "subtitle": "Our model operates across three different services",
+      "title": "SYSTEM ARCHITECTURE",
+      "subtitle": "Three different businesses, one single studio.",
       "cards": [
         {
           "title": "STARTUP<br>CREATION",
@@ -73,7 +73,7 @@
 
     "protocol": {
       "title": "BETTER, FASTER, STRONGER.",
-      "subtitle": "Building hardware is difficult, but we have a method validated in years of Robotics engineering",
+      "subtitle": "Building hardware is difficult, but we have a method validated in years of Robotics",
       "steps": [
         {
           "number": "STEP 01 // 4 WKS",
@@ -114,8 +114,8 @@
     },
 
     "contact": {
-      "title": "BE<br><span class=\"highlight\">UNCONVENTIONAL</span><br>WITH US",
-      "subtitle": "Three paths. One destination.",
+      "title": "BUILD<br><span class=\"highlight\">ROBOTS</span><br>WITH US",
+      "subtitle": "Join the robotics evolution. <br>Don't miss the chance",
       "buttons": [
         {
           "subtitle": "[ SPARK A REVOLUTION ]",
