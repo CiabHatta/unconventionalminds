@@ -72,6 +72,11 @@ ul { list-style: none; }
     transition: transform 0.15s ease-out; box-shadow: 0 0 10px rgba(242,92,5,0.4);
     mix-blend-mode: normal;
 }
+
+.cursor.on-orange {
+    background-color: #000 !important;
+}
+
 .cursor.hovered { transform: translate(-50%, -50%) scale(2.5); opacity: 0.7; }
 
 /* Header */
@@ -106,16 +111,16 @@ header.nav-bar {
     gap: 2px;
 }
 .logo-unconventional {
-    font-family: 'Chillax-Bold', sans-serif;
-    font-weight: 700;
+    font-family: 'Chillax-Regular', sans-serif;
+    font-weight: 400;
     font-size: 1.5rem;
     letter-spacing: 1px;
     color: var(--accent);
     transition: color 0.3s ease;
 }
 .logo-minds {
-    font-family: 'Chillax-Bold', sans-serif;
-    font-weight: 700;
+    font-family: 'Chillax-Regular', sans-serif;
+    font-weight: 400;
     font-size: 1.5rem;
     letter-spacing: 1px;
     color: var(--text);
@@ -166,7 +171,7 @@ header.nav-bar {
 /* Stella fissa che si muove */
 .progress-star {
     position: fixed;
-    bottom: -6px;
+    bottom: 0px;
     left: 10%;
     font-size: 50px;
     color: #151515;
