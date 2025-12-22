@@ -216,7 +216,8 @@ header.nav-bar {
 /* Hero Content - Layout orizzontale tags + description */
 .hero-content {
     display: flex;
-    gap: 60px;
+	flex-direction: column;
+    gap: 30px;
     align-items: space-between;
 }
 
