@@ -51,7 +51,7 @@
     "os": {
       "tag": "02 // UM_OS25.UM",
       "title": "SYSTEM ARCHITECTURE",
-      "subtitle": "Three different businesses, one single studio.",
+      "subtitle": "Our studio operates across three different services",
       "cards": [
         {
           "title": "STARTUP<br>CREATION",
@@ -100,7 +100,7 @@
 
     "investors": {
       "title": "HARD TECH IS<br>THE ONLY ASSET<br> THAT MATTERS.",
-      "subtitle": "We live in a hardware world, with hardware problem that requires hardware solutions. <br> We want to build a new ecosystem of helpful robotics solution, human centered.",
+      "subtitle": "We live in a hardware world, with hardware problems that requires hardware solutions. <br> We are building a new ecosystem of helpful robotics solution, human centered.",
       "stats": [
         {
           "label": "ROBOTICS MARKET SIZE",
