@@ -39,13 +39,13 @@ const logoIcon = document.querySelector('.logo-icon');
 const logoUnconventional = document.querySelector('.logo-unconventional');
 const logoMinds = document.querySelector('.logo-minds');
 
-// Logo text per sezione
+// Logo text per sezione - loaded from config.js
 const logoTexts = {
-    0: 'Minds',
-    1: 'Solutions',
-    2: 'Protocol',
-    3: 'Capital',
-    4: 'Workers'
+    0: LOGO_CONFIG.logoBySection['sec-0'].emphasizedText,
+    1: LOGO_CONFIG.logoBySection['sec-1'].emphasizedText,
+    2: LOGO_CONFIG.logoBySection['sec-2'].emphasizedText,
+    3: LOGO_CONFIG.logoBySection['sec-3'].emphasizedText,
+    4: LOGO_CONFIG.logoBySection['sec-4'].emphasizedText
 };
 
 let cur=0, tar=0, max=0;
