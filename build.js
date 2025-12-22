@@ -14,14 +14,69 @@ function r(old, val) {
   html = html.replace(new RegExp(old.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), val || '');
 }
 
+// Meta
 r('<title>UNCONVENTIONAL MINDS - Robotics Venture Studio</title>', `<title>${content.meta.title}</title>`);
+r('We bridge the gap between Lab & Market. From zero to Exit in 24 Months.', content.meta.description);
+
+// Home
 r('01 // VENTURE_STUDIO.UM', content.sections.home.tag);
 r('BUILD', content.sections.home.title.line1);
-r('PHYSICAL', content.sections.home.title.line2);  
+r('PHYSICAL', content.sections.home.title.line2);
 r('ASSETS.', content.sections.home.title.line3);
+r('[ MARKET_DRIVEN ]', content.sections.home.tags[0]);
+r('[ ART_INSPIRED ]', content.sections.home.tags[1]);
+r('[ TECH_BUILT ]', content.sections.home.tags[2]);
 r('ROBOTICS VENTURE STUDIO.', content.sections.home.description.strong);
+
+// OS Section
 r('02 // UM_OS25.UM', content.sections.os.tag);
 r('SYSTEM ARCHITECTURE', content.sections.os.title);
+r('Our proprietary operating model. Three distinct engines.', content.sections.os.subtitle);
+
+// OS Cards
+r('VENTURE<br>LABS', content.sections.os.cards[0].title);
+r('We create our own monsters. <br> Proprietary IP. Exit focus.', content.sections.os.cards[0].description);
+r('[ EQUITY ENGINE ]', content.sections.os.cards[0].label);
+r('CORPORATE<br>BUILDING', content.sections.os.cards[1].title);
+r('Startup-as-a-Service. <br> Whiteboard to hardware MVP in 6 months.', content.sections.os.cards[1].description);
+r('[ PARTNERSHIP ENGINE ]', content.sections.os.cards[1].label);
+r('DEEP TECH<br>SOLUTIONS', content.sections.os.cards[2].title);
+r('Engineering for corporate. <br> Solving blockers.', content.sections.os.cards[2].description);
+r('[ CASH FLOW ENGINE ]', content.sections.os.cards[2].label);
+
+// Protocol
+r('4D EXECUTION GRID', content.sections.protocol.title);
+r('Time-boxed framework ensuring delivery speed and focus.', content.sections.protocol.subtitle);
+r('STEP 01 // 4 WKS', content.sections.protocol.steps[0].number);
+r('SCOUT', content.sections.protocol.steps[0].title);
+r('Data-driven validation.<br>Extract market fit before building.', content.sections.protocol.steps[0].description);
+r('STEP 02 // 2 MO', content.sections.protocol.steps[1].number);
+r('CONCEPT', content.sections.protocol.steps[1].title);
+r('Identity first.<br>Aesthetic function.<br>Defining the soul.', content.sections.protocol.steps[1].description);
+r('STEP 03 // 6 MO', content.sections.protocol.steps[2].number);
+r('Brutal Engineering.<br>Modular stack, ROS2, dirty MVP.', content.sections.protocol.steps[2].description);
+r('STEP 04 // +7 MO', content.sections.protocol.steps[3].number);
+r('DEPLOY', content.sections.protocol.steps[3].title);
+r('Validation & Exit.<br>Pilots in real world context.', content.sections.protocol.steps[3].description);
+
+// Investors
+r('HARD TECH IS<br>THE ONLY ASSET<br>CLASS THAT MATTERS.', content.sections.investors.title);
+r('Software is saturated. Atoms are the new frontier.', content.sections.investors.subtitle);
+r('ROUND SIZE 1 M€', content.sections.investors.stats[0]);
+r(' TARGET EXIT 24 MO', content.sections.investors.stats[1]);
+
+// Contact
+r('JOIN<br><span class="highlight">THE</span><br>STUDIO', content.sections.contact.title);
+r('Three paths. One destination.', content.sections.contact.subtitle);
+r('[ NEED EXECUTION? ]', content.sections.contact.buttons[0].subtitle);
+r('[ JOIN PIPELINE ]', content.sections.contact.buttons[1].subtitle);
+r('[ SEEKING ALPHA ]', content.sections.contact.buttons[2].subtitle);
+r('mailto:info@unconventional.studio', content.sections.contact.buttons[0].link);
+r('mailto:founders@unconventional.studio', content.sections.contact.buttons[1].link);
+r('mailto:invest@unconventional.studio', content.sections.contact.buttons[2].link);
+
+// Footer
+r('UM_OS25 // UNCONVENTIONAL MINDS S.R.L. / GENOVA / ITALY', content.footer);
 
 fs.writeFileSync(OUTPUT_FILE, html);
 console.log('✅ Build complete!');
