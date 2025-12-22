@@ -7,24 +7,24 @@
   "header": {
     "logoBySection": {
       "sec-0": {
-        "text": "Unconventional",
-        "emphasizedText": "Minds"
+        "text": "unconventional",
+        "emphasizedText": "minds"
       },
       "sec-1": {
-        "text": "Unconventional",
-        "emphasizedText": "Solutions"
+        "text": "unconventional",
+        "emphasizedText": "solutions"
       },
       "sec-2": {
-        "text": "Unconventional",
-        "emphasizedText": "Protocol"
+        "text": "unconventional",
+        "emphasizedText": "protocol"
       },
       "sec-3": {
-        "text": "Unconventional",
-        "emphasizedText": "Capital"
+        "text": "unconventional",
+        "emphasizedText": "capital"
       },
       "sec-4": {
-        "text": "Unconventional",
-        "emphasizedText": "Workers"
+        "text": "unconventional",
+        "emphasizedText": "workers"
       }
     }
   },
@@ -33,9 +33,9 @@
     "home": {
       "tag": "01 // VENTURE_STUDIO.UM",
       "title": {
-        "line1": "BUILD",
-        "line2": "PHYSICAL",
-        "line3": "ASSETS."
+        "line1": "TECH",
+        "line2": "WITH",
+        "line3": "SOUL."
       },
       "tags": [
         "[ MARKET_DRIVEN ]",
@@ -44,93 +44,93 @@
       ],
       "description": {
         "strong": "ROBOTICS VENTURE STUDIO.",
-        "text": "We bridge the gap between Lab & Market.<br>\nFrom zero to Exit in 24 Months."
+        "text": "We build robotics ventures.<br>\nFrom zero to Exit."
       }
     },
 
     "os": {
       "tag": "02 // UM_OS25.UM",
       "title": "SYSTEM ARCHITECTUREs",
-      "subtitle": "Our proprietary operating model. Three distinct engines.",
+      "subtitle": "Our model operates across three different services",
       "cards": [
         {
-          "title": "VENTURE<br>LABS",
-          "description": "We create our own monsters. <br> Proprietary IP. Exit focus.",
-          "label": "[ EQUITY ENGINE ]"
+          "title": "STARTUP<br>CREATION",
+          "description": "We create our own startups. <br> We focus on a market need and we develop the entire business. <br> All around the user.",
+          "label": "[ UNCONVENTIONAL ENGINE ]"
         },
         {
-          "title": "CORPORATE<br>BUILDING",
-          "description": "Startup-as-a-Service. <br> Whiteboard to hardware MVP in 6 months.",
+          "title": "SaaS<br>STARTUP_AS_A_SERVICE",
+          "description": "We partner with enterprises since the beginning. <br> We build the business and product together.",
           "label": "[ PARTNERSHIP ENGINE ]"
         },
         {
-          "title": "DEEP TECH<br>SOLUTIONS",
-          "description": "Engineering for corporate. <br> Solving blockers.",
-          "label": "[ CASH FLOW ENGINE ]"
+          "title": "HARD TECH<br>SOLUTIONS",
+          "description": "Need Help? <br> Unconventional is here for you, with all services needed to build an incredible product.",
+          "label": "[ SERVICE ENGINE ]"
         }
       ]
     },
 
     "protocol": {
-      "title": "4D EXECUTION GRID",
-      "subtitle": "Time-boxed framework ensuring delivery speed and focus.",
+      "title": "BETTER, FASTER, STRONGER.",
+      "subtitle": "Building hardware is difficult, but we have a method validated in years of Robotics engineering",
       "steps": [
         {
           "number": "STEP 01 // 4 WKS",
-          "title": "SCOUT",
-          "description": "Data-driven validation.<br>Extract market fit before building."
+          "title": "DISCOVER",
+          "description": "We scan the market in search for a human need.<br> This is our starting point for create a user centered product."
         },
         {
           "number": "STEP 02 // 2 MO",
-          "title": "CONCEPT",
-          "description": "Identity first.<br>Aesthetic function.<br>Defining the soul."
+          "title": "DESIGN",
+          "description": "We design a functional solution, never seen.<br> The MVP design is focused on aesthetics and services<br> With the human in the center."
         },
         {
           "number": "STEP 03 // 6 MO",
-          "title": "BUILD",
-          "description": "Brutal Engineering.<br>Modular stack, ROS2, dirty MVP."
+          "title": "DEVELOP",
+          "description": "Brutal Engineering.<br> We develop from zero the solutions, using modular and scalable approach. <br> We don't build prototypes, but products."
         },
         {
           "number": "STEP 04 // +7 MO",
           "title": "DEPLOY",
-          "description": "Validation & Exit.<br>Pilots in real world context."
+          "description": "Startup launch.<br> Validation through pilot projects in real world, with real context, with exit mentality"
         }
       ]
     },
 
     "investors": {
-      "title": "HARD TECH IS<br>THE ONLY ASSET<br>CLASS THAT MATTERS.",
-      "subtitle": "Software is saturated. Atoms are the new frontier.",
+      "title": "HARD TECH IS<br>THE ONLY ASSET<br> THAT MATTERS.",
+      "subtitle": "We live in a hardware world, with hardware problem that requires hardware solutions. <br> We want to build a new ecosystem of helpful robotics solution, human centered.",
       "stats": [
         {
-          "label": "ROUND SIZE",
-          "value": "1 M€"
+          "label": "ROBOTICS MARKET SIZE",
+          "value": "10T€ within 2035"
         },
         {
-          "label": "TARGET EXIT",
-          "value": "24 MO"
+          "label": "MARKET GROWTH",
+          "value": "25% CAGR"
         }
       ]
     },
 
     "contact": {
-      "title": "JOIN<br><span class=\"highlight\">THE</span><br>STUDIO",
+      "title": "CRAFT AN<br><span class=\"highlight\">UNCONVENTIONAL</span><br>WORLD",
       "subtitle": "Three paths. One destination.",
       "buttons": [
         {
           "subtitle": "[ NEED EXECUTION? ]",
           "title": "CORPORATE",
-          "email": "info@unconventional.studio"
+          "email": "paolo@unconventionalminds.it"
         },
         {
           "subtitle": "[ JOIN PIPELINE ]",
           "title": "FOUNDER",
-          "email": "founders@unconventional.studio"
+          "email": "paolo@unconventionalminds.it"
         },
         {
           "subtitle": "[ SEEKING ALPHA ]",
           "title": "INVESTOR",
-          "email": "invest@unconventional.studio"
+          "email": "paolo@unconventionalminds.it"
         }
       ]
     }
