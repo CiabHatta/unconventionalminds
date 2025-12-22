@@ -132,6 +132,10 @@ header.nav-bar {
     color: #555; cursor: pointer; position: relative; transition: color 0.3s;
 }
 .nav-item:hover, .nav-item.active { color: var(--accent); font-weight: 700; }
+.nav-item.active.on-orange {
+    color: #fff !important;
+}
+
 .talk-btn {
     border: 2px solid #000; background: #000; color: var(--accent);
     padding: 20px 28px; font-family: 'Roboto Mono', sans-serif; font-size: 1rem; font-weight: 500;
