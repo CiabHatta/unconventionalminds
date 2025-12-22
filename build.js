@@ -64,8 +64,8 @@ r('Validation & Exit.<br>Pilots in real world context.', content.sections.protoc
 // Investors
 r('HARD TECH IS<br>THE ONLY ASSET<br>CLASS THAT MATTERS.', content.sections.investors.title);
 r('Software is saturated. Atoms are the new frontier.', content.sections.investors.subtitle);
-r('ROUND SIZE 1 M€', content.sections.investors.stats[0]);
-r(' TARGET EXIT 24 MO', content.sections.investors.stats[1]);
+r('ROUND SIZE 1 M€', `${content.sections.investors.stats[0].label} ${content.sections.investors.stats[0].value}`);
+r(' TARGET EXIT 24 MO', ` ${content.sections.investors.stats[1].label} ${content.sections.investors.stats[1].value}`);
 
 // Contact
 r('JOIN<br><span class="highlight">THE</span><br>STUDIO', content.sections.contact.title);
