@@ -175,7 +175,7 @@ header.nav-bar {
 /* Stella fissa che si muove */
 .progress-star {
 	position: fixed;
-    bottom: 19px;  /* STESSO VALORE DELLA LINEA */
+    bottom: 40px;  /* STESSO VALORE DELLA LINEA */
     left: 10%;
     font-size: 24px;
     color: #151515;
