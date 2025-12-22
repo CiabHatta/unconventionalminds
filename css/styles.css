@@ -217,8 +217,8 @@ header.nav-bar {
 .hero-content {
     display: flex;
 	flex-direction: column;
-    gap: 30px;
-    align-items: space-between;
+    gap: 60px;
+    align-items: flex-start;
 }
 
 .hero-tags {
