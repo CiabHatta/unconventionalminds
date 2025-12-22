@@ -115,6 +115,13 @@ function updateMobileProgress() {
 
     navs.forEach(n => n.classList.remove('active'));
     if(navs[currentSection]) navs[currentSection].classList.add('active');
+	navs.forEach(n => {
+		if(i === 1 || i === 3) {
+			n.classList.add('on-orange');
+		} else {
+			n.classList.remove('on-orange');
+		}
+	});
 
     // Change star color based on section
     if(currentSection === 1 || currentSection === 3) {
@@ -164,6 +171,15 @@ function loop() {
         let i = Math.round(cur / window.innerWidth);
         navs.forEach(n => n.classList.remove('active'));
         if(navs[i]) navs[i].classList.add('active');
+		
+		// Add/remove on-orange class for nav items on orange sections
+		navs.forEach(n => {
+			if(i === 1 || i === 3) {
+				n.classList.add('on-orange');
+			} else {
+				n.classList.remove('on-orange');
+			}
+		});
 
         // Progress Star Movement (5 sections: 0-4)
         if(star && max > 0) {
