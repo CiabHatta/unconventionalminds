@@ -456,16 +456,16 @@ header.nav-bar {
     border-top: 4px solid #000;
     box-shadow: 8px 8px 0 rgba(0,0,0,0.05);
 }
-/* Last card dimmed - Design V2 */
+/* Last card same style as others */
 .p-card:last-child {
-    background: #e8e0d2;
-    color: #9a8f7e;
+    background: #fdf7ec;
+    color: var(--text);
 }
 .p-card:last-child .p-title {
-    color: #9a8f7e;
+    color: var(--text);
 }
 .p-card:last-child .p-desc {
-    color: #c7beb1;
+    color: var(--text);
 }
 .p-num {
     font-family: 'Roboto Mono';
@@ -582,6 +582,7 @@ header.nav-bar {
     font-family: 'Nata Sans', sans-serif;
     font-weight: 500;
     text-align: left;
+    line-height: 1.3;
 }
 .contact-stack { display: flex; flex-direction: column; align-items: flex-end; justify-content: center; gap: 22px; flex: 0 0 auto; }
 .c-btn {
@@ -659,6 +660,7 @@ header.nav-bar {
     .inv-tit { font-size: 2.8rem; }
     .s-cont .tit-2 { font-size: 6rem; }
     .s-os .tit-2 { font-size: 4.5rem; }
+    .s-proto .tit-2 { font-size: 3.8rem; }
     .os-card p { font-size: 1.1rem; }
     .os-card h3 { font-size: 1.7rem; }
     .p-title { font-size: 1.6rem; }
@@ -682,6 +684,7 @@ header.nav-bar {
     .inv-stats { font-size: 1.2rem; }
     .s-cont .tit-2 { font-size: 4.5rem; }
     .s-os .tit-2 { font-size: 3rem; }
+    .s-proto .tit-2 { font-size: 2.5rem; }
     .os-card p { font-size: 0.95rem; }
     .os-card h3 { font-size: 1.4rem; }
     .os-mono { font-size: 0.85rem; }
@@ -711,6 +714,7 @@ header.nav-bar {
     .s-cont .tit-2 { font-size: 3.8rem; }
     .s-cont .sub-2 { font-size: 0.85rem; }
     .s-os .tit-2 { font-size: 2.5rem; }
+    .s-proto .tit-2 { font-size: 2rem; }
     .p-title { font-size: 1.1rem; }
     .p-desc { font-size: 0.75rem; }
     .p-num { font-size: 0.75rem; }
@@ -741,6 +745,7 @@ header.nav-bar {
     .p-title { font-size: 1.4rem; }
     .p-desc { font-size: 0.85rem; }
     .p-num { font-size: 0.8rem; }
+    .s-proto .tit-2 { font-size: 2.3rem; }
 
     /* Contact buttons */
     .c-tit { font-size: 1.5rem; }
@@ -759,6 +764,11 @@ header.nav-bar {
     /* Reset Cursor & Interaction */
     * { cursor: auto !important; }
     .cursor { display: none; }
+
+    /* Hide progress bar and star on mobile */
+    .progress-wrapper { display: none; }
+    .progress-line { display: none; }
+    .progress-star { display: none; }
 
     /* Native Scroll ON */
     html, body {
@@ -832,25 +842,51 @@ header.nav-bar {
     }
 
     /* Title Adjustments */
-    .hero-title { font-size: 14vw; margin-top: 0px; margin-left: 0; letter-spacing: -2px; }
-    .tit-2 { font-size: 3rem !important; }
+    .hero-title { font-size: 16vw; margin-top: 0px; margin-left: 0; letter-spacing: -1px; line-height: 0.85; }
+    .tit-2 { font-size: 2.5rem !important; }
+    .sub-2 { font-size: 0.75rem !important; }
+
+    /* Last section title bigger on mobile */
+    .s-cont .tit-2 { font-size: 4.5rem !important; line-height: 0.9; }
 
     /* Hero Content Mobile - Rimani verticale */
     .hero-content {
         flex-direction: column;
-        gap: 30px;
+        gap: 20px;
     }
     .hero-tags {
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
+    }
+    .h-tag {
+        font-size: 0.7rem;
     }
 
     .hero-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-main {
+        order: 1;
     }
 
     .hero-aside {
+        order: 2;
         text-align: left;
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    .hero-desc {
+        font-size: 0.85rem;
+    }
+
+    .hero-desc h2 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
     }
 
     /* OS Vertical Stack */
@@ -876,12 +912,13 @@ header.nav-bar {
     .inv-tit { font-size: 2.2rem; }
 
     /* Contact Stack Fix */
-    .contact-stack { width: 100%; margin-top: 20px; justify-content: flex-start; align-items: stretch; }
+    .contact-stack { width: 100%; margin-top: 10px; justify-content: flex-start; align-items: stretch; }
     .c-btn { width: 100%; height: auto; padding: 30px 20px; margin-bottom: 0; flex-direction: row; }
-    .c-tit { font-size: 1.4rem; }
+    .c-tit { font-size: 1.5rem; }
 
     /* Contact Override (Scont) */
-    .s-cont .stage { flex-direction: column; align-items: flex-start; gap: 40px; }
+    .s-cont .stage { flex-direction: column; align-items: flex-start; gap: 15px; }
+    .s-cont .intro-blk { margin-bottom: 0; }
     .s-cont .sec-tag, .s-cont .intro-blk { text-align: left; align-items: flex-start; right: auto; }
     .footer { position: relative; right: auto; bottom: 0; left: 0; margin-top: 50px; text-align: left; width: 100%; }
 
