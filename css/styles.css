@@ -657,7 +657,7 @@ header.nav-bar {
     .hero-desc { font-size: 1rem; }
     .hero-desc h2 { font-size: 1.5rem; }
     .hero-aside { font-size: 1.1rem; }
-    .inv-tit { font-size: 2.8rem; }
+    .inv-tit { font-size: 4.5rem; }
     .s-cont .tit-2 { font-size: 6rem; }
     .s-os .tit-2 { font-size: 4.5rem; }
     .s-proto .tit-2 { font-size: 3.8rem; }
@@ -679,7 +679,7 @@ header.nav-bar {
     .hero-desc h2 { font-size: 1.2rem; }
     .hero-aside { font-size: 1rem; }
     .sec-tag { font-size: 0.85rem; }
-    .inv-tit { font-size: 2rem; }
+    .inv-tit { font-size: 3rem; }
     .inv-stats span { font-size: 1rem; }
     .inv-stats { font-size: 1.2rem; }
     .s-cont .tit-2 { font-size: 4.5rem; }
@@ -707,7 +707,7 @@ header.nav-bar {
     .os-card h3 { font-size: 1.2rem; }
     .os-card p { font-size: 0.85rem; }
     .os-mono { font-size: 0.75rem; }
-    .inv-tit { font-size: 1.8rem; }
+    .inv-tit { font-size: 2.5rem; }
     .inv-stats span { font-size: 0.95rem; }
     .inv-stats { font-size: 1.1rem; }
     .c-tit { font-size: 1.3rem; }
@@ -752,7 +752,7 @@ header.nav-bar {
     .c-sub { font-size: 0.7rem; }
     .s-cont .tit-2 { font-size: 4rem; }
     .s-cont .sub-2 { font-size: 1rem; }
-    .inv-tit { font-size: 1.9rem; }
+    .inv-tit { font-size: 2.8rem; }
     .inv-stats { font-size: 1.1rem; }
     .inv-stats span { font-size: 0.9rem; }
 }
@@ -909,7 +909,7 @@ header.nav-bar {
     /* Investors Fix */
     .inv-container { width: 100%; height: auto; margin: 0; padding: 40px 20px; }
     .inv-stats { flex-direction: column; gap: 20px; }
-    .inv-tit { font-size: 2.2rem; }
+    .inv-tit { font-size: 2.5rem; }
 
     /* Contact Stack Fix */
     .contact-stack { width: 100%; margin-top: 10px; justify-content: flex-start; align-items: stretch; }
