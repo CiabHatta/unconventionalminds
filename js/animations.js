@@ -183,7 +183,7 @@ function loop() {
         track.style.transform = `translateX(-${cur}px)`;
 
         if (max > 0) {
-            bar.style.width = (cur / max) * 100 + '%';
+            //bar.style.width = (cur / max) * 100 + '%';
         }
 
         // =========================
