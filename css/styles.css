@@ -650,97 +650,106 @@ header.nav-bar {
 
 /* Retina 15" MacBook Pro & similar (1680px effective) */
 @media (max-width: 1680px) {
-    .hero-title { font-size: 11vw; }
-    .tit-2 { font-size: 5.5rem; }
-    .sub-2 { font-size: 1.3rem; }
-    .hero-desc { font-size: 1.15rem; }
-    .hero-desc h2 { font-size: 1.7rem; }
-    .inv-tit { font-size: 3.2rem; }
-    .s-cont .tit-2 { font-size: 7.5rem; }
-    .s-os .tit-2 { font-size: 5.5rem; }
-    .os-card p { font-size: 1.2rem; }
-    .os-card h3 { font-size: 2rem; }
-    .p-title { font-size: 2rem; }
-    .p-desc { font-size: 1rem; }
-    .c-tit { font-size: 2rem; }
-    .c-sub { font-size: 1.15rem; }
+    .hero-title { font-size: 9vw; }
+    .tit-2 { font-size: 4.5rem; }
+    .sub-2 { font-size: 1.1rem; }
+    .hero-desc { font-size: 1rem; }
+    .hero-desc h2 { font-size: 1.5rem; }
+    .hero-aside { font-size: 1.1rem; }
+    .inv-tit { font-size: 2.8rem; }
+    .s-cont .tit-2 { font-size: 6rem; }
+    .s-os .tit-2 { font-size: 4.5rem; }
+    .os-card p { font-size: 1.1rem; }
+    .os-card h3 { font-size: 1.7rem; }
+    .p-title { font-size: 1.6rem; }
+    .p-desc { font-size: 0.95rem; }
+    .c-tit { font-size: 1.7rem; }
+    .c-sub { font-size: 1rem; }
     .progress-star { font-size: 35px; }
 }
 
 /* Retina 13" MacBook & similar (1440px effective) */
 @media (max-width: 1440px) {
-    .hero-title { font-size: 7vw; }
-    .tit-2 { font-size: 3.5rem; }
-    .sub-2 { font-size: 1rem; }
-    .hero-desc { font-size: 0.9rem; }
-    .hero-desc h2 { font-size: 1.3rem; }
-    .sec-tag { font-size: 0.9rem; }
-    .inv-tit { font-size: 2.2rem; }
-    .inv-stats span { font-size: 1.1rem; }
-    .s-cont .tit-2 { font-size: 5.5rem; }
-    .s-os .tit-2 { font-size: 3.5rem; }
-    .os-card p { font-size: 1rem; }
-    .os-card h3 { font-size: 1.5rem; }
-    .os-mono { font-size: 0.9rem; }
-    .p-title { font-size: 1.3rem; }
-    .p-desc { font-size: 0.85rem; }
-    .p-num { font-size: 0.85rem; }
-    .c-tit { font-size: 1.6rem; }
-    .c-sub { font-size: 0.95rem; }
+    .hero-title { font-size: 6.5vw; }
+    .tit-2 { font-size: 3rem; }
+    .sub-2 { font-size: 0.9rem; }
+    .hero-desc { font-size: 0.85rem; }
+    .hero-desc h2 { font-size: 1.2rem; }
+    .hero-aside { font-size: 1rem; }
+    .sec-tag { font-size: 0.85rem; }
+    .inv-tit { font-size: 2rem; }
+    .inv-stats span { font-size: 1rem; }
+    .inv-stats { font-size: 1.2rem; }
+    .s-cont .tit-2 { font-size: 4.5rem; }
+    .s-os .tit-2 { font-size: 3rem; }
+    .os-card p { font-size: 0.95rem; }
+    .os-card h3 { font-size: 1.4rem; }
+    .os-mono { font-size: 0.85rem; }
+    .p-title { font-size: 1.2rem; }
+    .p-desc { font-size: 0.8rem; }
+    .p-num { font-size: 0.8rem; }
+    .c-tit { font-size: 1.4rem; }
+    .c-sub { font-size: 0.85rem; }
     .progress-star { font-size: 30px; }
 }
 
 @media (max-width: 1280px) {
-    .hero-title { font-size: 6vw; }
-    .tit-2 { font-size: 3rem; }
-    .sub-2 { font-size: 0.9rem; }
-    .hero-desc { font-size: 0.85rem; }
-    .hero-desc h2 { font-size: 1.1rem; }
-    .sec-tag { font-size: 0.8rem; }
-    .os-card h3 { font-size: 1.3rem; }
-    .os-card p { font-size: 0.9rem; }
-    .os-mono { font-size: 0.8rem; }
-    .inv-tit { font-size: 2rem; }
-    .inv-stats span { font-size: 1rem; }
-    .c-tit { font-size: 1.4rem; }
-    .s-cont .tit-2 { font-size: 4.5rem; }
-    .s-cont .sub-2 { font-size: 0.95rem; }
-    .s-os .tit-2 { font-size: 3rem; }
-    .p-title { font-size: 1.2rem; }
-    .p-desc { font-size: 0.8rem; }
-    .p-num { font-size: 0.8rem; }
-    .c-sub { font-size: 0.85rem; }
+    .hero-title { font-size: 5.5vw; }
+    .tit-2 { font-size: 2.5rem; }
+    .sub-2 { font-size: 0.85rem; }
+    .hero-desc { font-size: 0.8rem; }
+    .hero-desc h2 { font-size: 1rem; }
+    .hero-aside { font-size: 0.9rem; }
+    .sec-tag { font-size: 0.75rem; }
+    .os-card h3 { font-size: 1.2rem; }
+    .os-card p { font-size: 0.85rem; }
+    .os-mono { font-size: 0.75rem; }
+    .inv-tit { font-size: 1.8rem; }
+    .inv-stats span { font-size: 0.95rem; }
+    .inv-stats { font-size: 1.1rem; }
+    .c-tit { font-size: 1.3rem; }
+    .s-cont .tit-2 { font-size: 3.8rem; }
+    .s-cont .sub-2 { font-size: 0.85rem; }
+    .s-os .tit-2 { font-size: 2.5rem; }
+    .p-title { font-size: 1.1rem; }
+    .p-desc { font-size: 0.75rem; }
+    .p-num { font-size: 0.75rem; }
+    .c-sub { font-size: 0.8rem; }
     .progress-star { font-size: 26px; }
 }
 
 /* Tablet Landscape & Small Laptops (769px - 1024px) */
 @media (max-width: 1024px) {
-    .hero-title { font-size: 8vw; }
-    .tit-2 { font-size: 3.5rem; }
-    .sub-2 { font-size: 1.1rem; }
-    .hero-desc { font-size: 1rem; }
-    .hero-desc h2 { font-size: 1.4rem; }
-    .sec-tag { font-size: 0.9rem; }
+    .hero-title { font-size: 7vw; }
+    .tit-2 { font-size: 2.8rem; }
+    .sub-2 { font-size: 0.95rem; }
+    .hero-desc { font-size: 0.9rem; }
+    .hero-desc h2 { font-size: 1.2rem; }
+    .hero-aside { font-size: 0.95rem; }
+    .sec-tag { font-size: 0.8rem; }
 
     /* OS Cards più strette */
     .os-wrap { gap: 20px; }
     .os-card { min-width: 280px; }
-    .os-card h3 { font-size: 1.8rem; }
-    .os-card p { font-size: 1.1rem; }
-    .s-os .tit-2 { font-size: 3.5rem; }
+    .os-card h3 { font-size: 1.5rem; }
+    .os-card p { font-size: 0.95rem; }
+    .os-mono { font-size: 0.8rem; }
+    .s-os .tit-2 { font-size: 2.8rem; }
 
     /* Protocol cards più compatte */
     .p-card { min-width: 220px; padding: 30px 20px; }
-    .p-title { font-size: 1.8rem; }
-    .p-desc { font-size: 0.95rem; }
+    .p-title { font-size: 1.4rem; }
+    .p-desc { font-size: 0.85rem; }
+    .p-num { font-size: 0.8rem; }
 
     /* Contact buttons */
-    .c-tit { font-size: 1.8rem; }
-    .c-sub { font-size: 0.75rem; }
-    .s-cont .tit-2 { font-size: 5rem; }
-    .s-cont .sub-2 { font-size: 1.2rem; }
-    .inv-tit { font-size: 2.2rem; }
-    .inv-stats { font-size: 1.3rem; }
+    .c-tit { font-size: 1.5rem; }
+    .c-sub { font-size: 0.7rem; }
+    .s-cont .tit-2 { font-size: 4rem; }
+    .s-cont .sub-2 { font-size: 1rem; }
+    .inv-tit { font-size: 1.9rem; }
+    .inv-stats { font-size: 1.1rem; }
+    .inv-stats span { font-size: 0.9rem; }
 }
 
 /* MOBILE ENGINE (APPROCCIO VERSIONE 31)
