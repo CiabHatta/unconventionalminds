@@ -171,99 +171,123 @@ function updateMobileProgress() {
     }
 }
 
+let lastSectionIndex = -1;
+
 function loop() {
-    if(!isMobile) {
-        // Physics for desktop
+    if (!isMobile) {
+
+        // =========================
+        // SCROLL PHYSICS
+        // =========================
         cur += (tar - cur) * 0.08;
         track.style.transform = `translateX(-${cur}px)`;
-        if(max > 0) bar.style.width = (cur/max)*100 + '%';
 
-        // Calculate current section index based on scroll position
-        // Adding offset to change color earlier (0.1 = 10% earlier)
-        let offset = window.innerWidth * 0.1; // Change 10% before reaching the section
-        let currentSectionIndex = Math.floor((cur + offset) / window.innerWidth);
+        if (max > 0) {
+            bar.style.width = (cur / max) * 100 + '%';
+        }
 
-        // Navigation Highlighting
-        navs.forEach(n => n.classList.remove('active'));
-        if(navs[currentSectionIndex]) navs[currentSectionIndex].classList.add('active');
+        // =========================
+        // SECTION CALCULATION
+        // =========================
+        let progress = max > 0 ? cur / max : 0;
+        progress = Math.max(0, Math.min(1, progress));
 
-        // Progress Star Movement (5 sections: 0-4)
-        if(star && max > 0) {
-            let progress = cur / max; // 0 to 1
-            let sectionProgress = progress * (totalSections - 1); // 0 to 4
-            let starLeft = (sectionProgress * 25); // From 0% to 100% (4 sections * 25%)
+        let currentSectionIndex = Math.floor(progress * totalSections - 0.0001);
+
+
+        // =========================
+        // SECTION CHANGE EVENT
+        // =========================
+        if (currentSectionIndex !== lastSectionIndex) {
+            lastSectionIndex = currentSectionIndex;
+
+            const isOrange = (currentSectionIndex === 1 || currentSectionIndex === 3);
+
+            // -------------------------
+            // NAVIGATION
+            // -------------------------
+            navs.forEach((n, i) => {
+                n.classList.toggle('active', i === currentSectionIndex);
+                n.classList.toggle('on-orange', isOrange);
+            });
+
+            // -------------------------
+            // STAR + CURSOR COLOR
+            // -------------------------
+            if (star) {
+                star.classList.toggle('on-orange', isOrange);
+            }
+
+            if (cursor) {
+                cursor.classList.toggle('on-orange', isOrange);
+            }
+
+            // -------------------------
+            // LOGO ICON + COLOR
+            // -------------------------
+            if (logoIcon) {
+                logoIcon.style.backgroundImage = isOrange
+                    ? "url('assets/Logo_white.png')"
+                    : "url('assets/Logo_dark.png')";
+            }
+
+            if (logoUnconventional) {
+                logoUnconventional.style.color = isOrange ? '#fff' : 'var(--accent)';
+            }
+
+            // -------------------------
+            // LOGO TEXT (FADE)
+            // -------------------------
+            if (
+                logoMinds &&
+                logoTexts[currentSectionIndex] &&
+                currentLogoText !== logoTexts[currentSectionIndex]
+            ) {
+                currentLogoText = logoTexts[currentSectionIndex];
+                logoMinds.style.opacity = '0';
+
+                setTimeout(() => {
+                    logoMinds.textContent = currentLogoText;
+                    logoMinds.style.opacity = '1';
+                }, 300);
+            }
+
+            if (logoUnconventional && logoBaseTexts[currentSectionIndex]) {
+                logoUnconventional.textContent = logoBaseTexts[currentSectionIndex];
+            }
+        }
+
+        // =========================
+        // STAR MOVEMENT (ONLY)
+        // =========================
+        if (star && max > 0) {
+            let progress = cur / max;
+            let sectionProgress = progress * (totalSections - 1);
+            let starLeft = sectionProgress * 25;
             star.style.left = starLeft + '%';
-
-            // Change color when star enters orange sections (1 or 3)
-            // Use currentSectionIndex which is based on actual scroll position
-            let isOnOrange = (currentSectionIndex === 1) || (currentSectionIndex === 3);
-
-            if(isOnOrange) {
-                star.classList.add('on-orange');
-				cursor.classList.add('on-orange');
-            } else {
-                star.classList.remove('on-orange');
-				cursor.classList.remove('on-orange');
-            }
         }
 
-		// Add/remove on-orange class for nav items - use same logic as star
-		let isOnOrangeNav = (currentSectionIndex === 1) || (currentSectionIndex === 3);
-
-		navs.forEach(n => {
-			if(isOnOrangeNav) {
-				n.classList.add('on-orange');
-			} else {
-				n.classList.remove('on-orange');
-			}
-		});
-
-        // Logo image and color change on orange sections (1 and 3)
-        if(currentSectionIndex === 1 || currentSectionIndex === 3) {
-            if(logoIcon) {
-                logoIcon.style.backgroundImage = "url('assets/Logo_white.png')";
-            }
-            if(logoUnconventional) {
-                logoUnconventional.style.color = '#fff';
-            }
-        } else {
-            if(logoIcon) {
-                logoIcon.style.backgroundImage = "url('assets/Logo_dark.png')";
-            }
-            if(logoUnconventional) {
-                logoUnconventional.style.color = 'var(--accent)';
-            }
-        }
-
-        // Change logo text based on section with fade
-        if(logoMinds && logoTexts[currentSectionIndex] && currentLogoText !== logoTexts[currentSectionIndex]) {
-            currentLogoText = logoTexts[currentSectionIndex];
-            logoMinds.style.opacity = '0';
-            setTimeout(() => {
-                logoMinds.textContent = currentLogoText;
-                logoMinds.style.opacity = '1';
-            }, 300);
-        }
-        // Change logo base text (Unconventional)
-        if(logoUnconventional && logoBaseTexts[currentSectionIndex]) {
-            logoUnconventional.textContent = logoBaseTexts[currentSectionIndex];
-        }
-
-        // Timeline Animation logic (Desktop only)
-        if(sProto && tBar) {
+        // =========================
+        // TIMELINE (DESKTOP)
+        // =========================
+        if (sProto && tBar) {
             let start = sProto.offsetLeft;
             let rel = cur - start + (window.innerWidth * 0.55);
             let pct = Math.max(0, Math.min(1, rel / (window.innerWidth * 0.8)));
+
             tBar.style.width = (pct * 100) + '%';
 
-            if(pct > 0.1) pSteps[0].classList.add('active'); else pSteps[0].classList.remove('active');
-            if(pct > 0.35) pSteps[1].classList.add('active'); else pSteps[1].classList.remove('active');
-            if(pct > 0.6) pSteps[2].classList.add('active'); else pSteps[2].classList.remove('active');
-            if(pct > 0.85) pSteps[3].classList.add('active'); else pSteps[3].classList.remove('active');
+            if (pct > 0.1) pSteps[0].classList.add('active'); else pSteps[0].classList.remove('active');
+            if (pct > 0.35) pSteps[1].classList.add('active'); else pSteps[1].classList.remove('active');
+            if (pct > 0.6) pSteps[2].classList.add('active'); else pSteps[2].classList.remove('active');
+            if (pct > 0.85) pSteps[3].classList.add('active'); else pSteps[3].classList.remove('active');
         }
     }
+
     requestAnimationFrame(loop);
 }
+
+
 
 // GoTo with Logic Branching
 window.goTo = function(i) {
