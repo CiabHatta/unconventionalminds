@@ -105,10 +105,12 @@ function updateMobileProgress() {
     const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrollProgress = scrollTop / scrollHeight;
 
-    // Update progress bar
-    bar.style.width = (scrollProgress * 100) + '%';
+    // Update progress bar (only if it exists)
+    if(bar) {
+        bar.style.width = (scrollProgress * 100) + '%';
+    }
 
-    // Update progress star
+    // Update progress star (only if it exists)
     if(star) {
         let starLeft = 0 + (scrollProgress * 72); // From 10% to 82%
         star.style.left = starLeft + '%';
@@ -120,23 +122,24 @@ function updateMobileProgress() {
     let currentSection = Math.round(scrollTop / sectionHeight);
     currentSection = Math.min(currentSection, 3); // max nav index is 3
 
-    navs.forEach(n => n.classList.remove('active'));
+    navs.forEach(n => {
+        n.classList.remove('active');
+        // Apply on-orange class based on current section
+        if(currentSection === 1 || currentSection === 3) {
+            n.classList.add('on-orange');
+        } else {
+            n.classList.remove('on-orange');
+        }
+    });
     if(navs[currentSection]) navs[currentSection].classList.add('active');
-	navs.forEach(n => {
-		if(i === 1 || i === 3) {
-			n.classList.add('on-orange');
-		} else {
-			n.classList.remove('on-orange');
-		}
-	});
 
-    // Change star color based on section
+    // Change star color based on section (only if elements exist)
     if(currentSection === 1 || currentSection === 3) {
-        star.classList.add('on-orange');
-		cursor.classList.add('on-orange');
+        if(star) star.classList.add('on-orange');
+		if(cursor) cursor.classList.add('on-orange');
     } else {
-        star.classList.remove('on-orange');
-		cursor.classList.remove('on-orange'); 
+        if(star) star.classList.remove('on-orange');
+		if(cursor) cursor.classList.remove('on-orange');
     }
 
     // Logo image and color change on orange sections (1 and 3)
