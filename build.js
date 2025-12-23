@@ -35,31 +35,31 @@ r('SYSTEM ARCHITECTURE', content.sections.os.title);
 r('Our proprietary operating model. Three distinct engines.', content.sections.os.subtitle);
 
 // OS Cards
-r('VENTURE<br>LABS', content.sections.os.cards[0].title);
-r('We create our own monsters. <br> Proprietary IP. Exit focus.', content.sections.os.cards[0].description);
-r('[ EQUITY ENGINE ]', content.sections.os.cards[0].label);
-r('CORPORATE<br>BUILDING', content.sections.os.cards[1].title);
-r('Startup-as-a-Service. <br> Whiteboard to hardware MVP in 6 months.', content.sections.os.cards[1].description);
-r('[ PARTNERSHIP ENGINE ]', content.sections.os.cards[1].label);
-r('DEEP TECH<br>SOLUTIONS', content.sections.os.cards[2].title);
-r('Engineering for corporate. <br> Solving blockers.', content.sections.os.cards[2].description);
-r('[ CASH FLOW ENGINE ]', content.sections.os.cards[2].label);
+r('STARTUP<br>CREATION', content.sections.os.cards[0].title);
+r('We create our own startups. <br> We focus on a market need and we develop the entire business. <br> All around the user.', content.sections.os.cards[0].description);
+r('[ UNCONVENTIONAL ENGINE ]', content.sections.os.cards[0].label);
+r('CORPORATE<br>TECHING', content.sections.os.cards[1].title);
+r('We partner with enterprises since the beginning. <br> We build the business and product together.', content.sections.os.cards[1].description);
+r('[ SaaS ENGINE ]', content.sections.os.cards[1].label);
+r('HARD TECH<br>SOLUTIONS', content.sections.os.cards[2].title);
+r('Need Help? <br> Unconventional is here for you, with all services needed to build an incredible product.', content.sections.os.cards[2].description);
+r('[ SERVICE ENGINE ]', content.sections.os.cards[2].label);
 
 // Protocol
-r('4D EXECUTION GRID', content.sections.protocol.title);
-r('Time-boxed framework ensuring delivery speed and focus.', content.sections.protocol.subtitle);
+r('BETTER, FASTER, STRONGER.', content.sections.protocol.title);
+r('Building hardware is difficult, but we have a method validated in years of Robotics', content.sections.protocol.subtitle);
 r('STEP 01 // 4 WKS', content.sections.protocol.steps[0].number);
-r('SCOUT', content.sections.protocol.steps[0].title);
-r('Data-driven validation.<br>Extract market fit before building.', content.sections.protocol.steps[0].description);
+r('DISCOVER', content.sections.protocol.steps[0].title);
+r('We scan the market in search for a human need.<br> This is our starting point for create a user centered product.', content.sections.protocol.steps[0].description);
 r('STEP 02 // 2 MO', content.sections.protocol.steps[1].number);
-r('CONCEPT', content.sections.protocol.steps[1].title);
-r('Identity first.<br>Aesthetic function.<br>Defining the soul.', content.sections.protocol.steps[1].description);
+r('DESIGN', content.sections.protocol.steps[1].title);
+r('We design a functional solution, never seen.<br> The MVP design is focused on aesthetics and services<br> With the human in the center.', content.sections.protocol.steps[1].description);
 r('STEP 03 // 6 MO', content.sections.protocol.steps[2].number);
-r('BUILD', content.sections.protocol.steps[2].title);
-r('Brutal Engineering.<br>Modular stack, ROS2, dirty MVP.', content.sections.protocol.steps[2].description);
+r('TECH', content.sections.protocol.steps[2].title);
+r('Brutal Engineering.<br> We develop from zero the solutions, using modular and scalable approach. <br> We don\'t build prototypes, but products.', content.sections.protocol.steps[2].description);
 r('STEP 04 // +7 MO', content.sections.protocol.steps[3].number);
 r('DEPLOY', content.sections.protocol.steps[3].title);
-r('Validation & Exit.<br>Pilots in real world context.', content.sections.protocol.steps[3].description);
+r('Startup launch.<br> Validation through pilot projects in real world, with real context, with exit mentality', content.sections.protocol.steps[3].description);
 
 // Investors
 r('HARD TECH IS<br>THE ONLY ASSET<br>CLASS THAT MATTERS.', content.sections.investors.title);
