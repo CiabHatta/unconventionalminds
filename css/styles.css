@@ -554,36 +554,69 @@ header.nav-bar {
    3. RESPONSIVE BREAKPOINTS
    ============================================================ */
 
-/* Laptop & Small Desktops (1024px - 1440px) */
-@media (max-width: 1440px) {
-    .hero-title { font-size: 10vw; }
+/* Retina 15" MacBook Pro & similar (1680px effective) */
+@media (max-width: 1680px) {
+    .hero-title { font-size: 9vw; }
     .tit-2 { font-size: 5.5rem; }
     .sub-2 { font-size: 1.3rem; }
-    .hero-desc { font-size: 1.2rem; }
-    .hero-desc h2 { font-size: 1.8rem; }
-    .inv-tit { font-size: 3rem; }
-    .s-cont .tit-2 { font-size: 8rem; }
+    .hero-desc { font-size: 1.15rem; }
+    .hero-desc h2 { font-size: 1.7rem; }
+    .inv-tit { font-size: 3.2rem; }
+    .s-cont .tit-2 { font-size: 7.5rem; }
     .s-os .tit-2 { font-size: 5.5rem; }
-    .os-card p { font-size: 1.3rem; }
-    .os-card h3 { font-size: 2.2rem; }
+    .os-card p { font-size: 1.2rem; }
+    .os-card h3 { font-size: 2rem; }
+    .p-title { font-size: 2rem; }
+    .p-desc { font-size: 1rem; }
+    .c-tit { font-size: 2rem; }
+    .c-sub { font-size: 1.15rem; }
+    .progress-star { font-size: 35px; }
+}
+
+/* Retina 13" MacBook & similar (1440px effective) */
+@media (max-width: 1440px) {
+    .hero-title { font-size: 7vw; }
+    .tit-2 { font-size: 3.5rem; }
+    .sub-2 { font-size: 1rem; }
+    .hero-desc { font-size: 0.9rem; }
+    .hero-desc h2 { font-size: 1.3rem; }
+    .sec-tag { font-size: 0.9rem; }
+    .inv-tit { font-size: 2.2rem; }
+    .inv-stats span { font-size: 1.1rem; }
+    .s-cont .tit-2 { font-size: 5.5rem; }
+    .s-os .tit-2 { font-size: 3.5rem; }
+    .os-card p { font-size: 1rem; }
+    .os-card h3 { font-size: 1.5rem; }
+    .os-mono { font-size: 0.9rem; }
+    .p-title { font-size: 1.3rem; }
+    .p-desc { font-size: 0.85rem; }
+    .p-num { font-size: 0.85rem; }
+    .c-tit { font-size: 1.6rem; }
+    .c-sub { font-size: 0.95rem; }
+    .progress-star { font-size: 30px; }
 }
 
 @media (max-width: 1280px) {
-    .hero-title { font-size: 9vw; }
-    .tit-2 { font-size: 4.5rem; }
-    .sub-2 { font-size: 1.2rem; }
-    .hero-desc { font-size: 1.1rem; }
-    .hero-desc h2 { font-size: 1.6rem; }
-    .sec-tag { font-size: 1rem; }
-    .os-card h3 { font-size: 2rem; }
-    .os-card p { font-size: 1.2rem; }
-    .inv-tit { font-size: 2.5rem; }
-    .c-tit { font-size: 2rem; }
-    .s-cont .tit-2 { font-size: 6.5rem; }
-    .s-cont .sub-2 { font-size: 1.3rem; }
-    .s-os .tit-2 { font-size: 4.5rem; }
-    .p-title { font-size: 2rem; }
-    .p-desc { font-size: 1rem; }
+    .hero-title { font-size: 6vw; }
+    .tit-2 { font-size: 3rem; }
+    .sub-2 { font-size: 0.9rem; }
+    .hero-desc { font-size: 0.85rem; }
+    .hero-desc h2 { font-size: 1.1rem; }
+    .sec-tag { font-size: 0.8rem; }
+    .os-card h3 { font-size: 1.3rem; }
+    .os-card p { font-size: 0.9rem; }
+    .os-mono { font-size: 0.8rem; }
+    .inv-tit { font-size: 2rem; }
+    .inv-stats span { font-size: 1rem; }
+    .c-tit { font-size: 1.4rem; }
+    .s-cont .tit-2 { font-size: 4.5rem; }
+    .s-cont .sub-2 { font-size: 0.95rem; }
+    .s-os .tit-2 { font-size: 3rem; }
+    .p-title { font-size: 1.2rem; }
+    .p-desc { font-size: 0.8rem; }
+    .p-num { font-size: 0.8rem; }
+    .c-sub { font-size: 0.85rem; }
+    .progress-star { font-size: 26px; }
 }
 
 /* Tablet Landscape & Small Laptops (769px - 1024px) */
