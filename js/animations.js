@@ -179,7 +179,7 @@ function loop() {
         if(max > 0) bar.style.width = (cur/max)*100 + '%';
 
         // Navigation Highlighting
-        let i = Math.round(cur / window.innerWidth);
+        let i = Math.floor(cur / window.innerWidth);
         navs.forEach(n => n.classList.remove('active'));
         if(navs[i]) navs[i].classList.add('active');
 		
