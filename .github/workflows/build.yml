@@ -20,14 +20,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-
-      - name: Run build script
-        run: npm run build
-
       - name: Prepare deployment directory
         run: |
           mkdir -p deploy
