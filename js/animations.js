@@ -110,7 +110,7 @@ function updateMobileProgress() {
 
     // Update progress star
     if(star) {
-        let starLeft = 10 + (scrollProgress * 72); // From 10% to 82%
+        let starLeft = 0 + (scrollProgress * 72); // From 10% to 82%
         star.style.left = starLeft + '%';
     }
 
@@ -178,29 +178,27 @@ function loop() {
         track.style.transform = `translateX(-${cur}px)`;
         if(max > 0) bar.style.width = (cur/max)*100 + '%';
 
+        // Calculate current section index based on scroll position
+        // Adding offset to change color earlier (0.1 = 10% earlier)
+        let offset = window.innerWidth * 0.1; // Change 10% before reaching the section
+        let currentSectionIndex = Math.floor((cur + offset) / window.innerWidth);
+
         // Navigation Highlighting
-        let i = Math.floor(cur / window.innerWidth);
         navs.forEach(n => n.classList.remove('active'));
-        if(navs[i]) navs[i].classList.add('active');
-		
-		// Add/remove on-orange class for nav items on orange sections
-		navs.forEach(n => {
-			if(i === 1 || i === 3) {
-				n.classList.add('on-orange');
-			} else {
-				n.classList.remove('on-orange');
-			}
-		});
+        if(navs[currentSectionIndex]) navs[currentSectionIndex].classList.add('active');
 
         // Progress Star Movement (5 sections: 0-4)
         if(star && max > 0) {
             let progress = cur / max; // 0 to 1
             let sectionProgress = progress * (totalSections - 1); // 0 to 4
-            let starLeft = 10 + (sectionProgress * 18); // From 10% to 82% (10 + 4*18)
+            let starLeft = (sectionProgress * 25); // From 0% to 100% (4 sections * 25%)
             star.style.left = starLeft + '%';
 
-            // Change color on orange sections (1 and 3)
-            if(i === 1 || i === 3) {
+            // Change color when star enters orange sections (1 or 3)
+            // Use currentSectionIndex which is based on actual scroll position
+            let isOnOrange = (currentSectionIndex === 1) || (currentSectionIndex === 3);
+
+            if(isOnOrange) {
                 star.classList.add('on-orange');
 				cursor.classList.add('on-orange');
             } else {
@@ -209,8 +207,19 @@ function loop() {
             }
         }
 
+		// Add/remove on-orange class for nav items - use same logic as star
+		let isOnOrangeNav = (currentSectionIndex === 1) || (currentSectionIndex === 3);
+
+		navs.forEach(n => {
+			if(isOnOrangeNav) {
+				n.classList.add('on-orange');
+			} else {
+				n.classList.remove('on-orange');
+			}
+		});
+
         // Logo image and color change on orange sections (1 and 3)
-        if(i === 1 || i === 3) {
+        if(currentSectionIndex === 1 || currentSectionIndex === 3) {
             if(logoIcon) {
                 logoIcon.style.backgroundImage = "url('assets/Logo_white.png')";
             }
@@ -227,8 +236,8 @@ function loop() {
         }
 
         // Change logo text based on section with fade
-        if(logoMinds && logoTexts[i] && currentLogoText !== logoTexts[i]) {
-            currentLogoText = logoTexts[i];
+        if(logoMinds && logoTexts[currentSectionIndex] && currentLogoText !== logoTexts[currentSectionIndex]) {
+            currentLogoText = logoTexts[currentSectionIndex];
             logoMinds.style.opacity = '0';
             setTimeout(() => {
                 logoMinds.textContent = currentLogoText;
@@ -236,8 +245,8 @@ function loop() {
             }, 300);
         }
         // Change logo base text (Unconventional)
-        if(logoUnconventional && logoBaseTexts[i]) {
-            logoUnconventional.textContent = logoBaseTexts[i];
+        if(logoUnconventional && logoBaseTexts[currentSectionIndex]) {
+            logoUnconventional.textContent = logoBaseTexts[currentSectionIndex];
         }
 
         // Timeline Animation logic (Desktop only)
@@ -265,6 +274,7 @@ window.goTo = function(i) {
     } else {
         // Desktop Horizontal math
         tar = el.offsetLeft;
+        // Don't manually update colors - let the loop handle it based on actual position
     }
 }
 
