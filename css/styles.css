@@ -239,6 +239,28 @@ header.nav-bar {
     align-items: flex-start;
 }
 
+.hero-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.hero-main {
+    grid-column: 1 / 2;
+}
+
+.hero-aside {
+    grid-column: 2 / 3;
+    text-align: justify;
+    font-family: 'Nata Sans', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    font-weight: 600;
+    color: var(--text);
+    margin-top: 10px;
+}
+
 .hero-tags {
     display: flex;
     gap: 20px;
@@ -744,6 +766,14 @@ header.nav-bar {
     .hero-tags {
         flex-direction: column;
         gap: 10px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-aside {
+        text-align: left;
     }
 
     /* OS Vertical Stack */
